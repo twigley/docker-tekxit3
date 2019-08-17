@@ -5,7 +5,7 @@ WORKDIR /
 EXPOSE 25565 25565
 
 # default url to start with
-ENV MEGA_URL=https://mega.nz/#!KBNRkCKZ!W9TcA2WWUWtAmfCQ1GTO2jPV_R3_IpfKeQI-C3wX5O8
+ENV MEGA_URL=https://www.tekx.it/downloads/0.96Tekxit3Server.zip
 # min memory use for this modpack
 ENV INIT_MEM=4G
 # max mem that we should let java use
