@@ -13,9 +13,9 @@ RUN apt-get update -y && apt-get install unzip wget -y --no-install-recommends
 RUN wget ${MEGA_URL} -O mc.zip
 RUN unzip mc.zip -d /data-temp
 RUN mkdir /data
-#RUN mv -v data-temp/*/* /data
-RUN ["/bin/bash", "-c", "mv -v data-temp/*/!(server.properties|ops.json|banned-ips.json|banned-players.json|whitelist.json|usercache.json) data/"]
-#RUN mv -v data-temp/* data/                                                                                                                 
+RUN mv -v data-temp/*/* /data
+#RUN ["/bin/bash", "-c", "mv -v data-temp/*/!(server.properties|ops.json|banned-ips.json|banned-players.json|whitelist.json|usercache.json) data/"]
+RUN mv -v data-temp/* data/                                                                                                                 
 RUN rm -r -f /data-temp                                                                                                                     
 RUN rm -r -f ./mc.zip                                                                                                                                                                                                                                                                   #startup script
 COPY ./start.sh start.sh    
