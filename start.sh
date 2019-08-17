@@ -8,4 +8,4 @@ mv -v data-temp/*/!(server.properties|ops.json|banned-ips.json|banned-players.js
 rm -r -f /data-temp 
 rm -r -f ./mc.zip
 jarfile=$(cd /data && ls|grep forge-*.jar)
-cd /data && java -server "-Xmx${INIT_MEM}" "-Xms${MAX_MEM}" "-Dfml.queryResult=confirm" -jar $jarfile nogui
+cd /data && java -server "-Xms${INIT_MEM}" "-Xmx${MAX_MEM}" "-Dfml.queryResult=confirm" -jar $jarfile nogui
