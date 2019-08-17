@@ -1,7 +1,8 @@
 #!/bin/bash
 shopt -s extglob; set +H
-megadl --path=mc.zip ${MEGA_URL}
-unzip mc.zip -d /data-temp
+#megadl --path=mc.zip ${MEGA_URL}
+wget https://www.tekx.it/downloads/0.96Tekxit3Server.zip
+unzip 0.96Tekxit3Server.zip -d /data-temp
 #mv -v data-temp/*/* data/
 mv -v data-temp/*/!(server.properties|ops.json|banned-ips.json|banned-players.json|whitelist.json|usercache.json) data/
 rm -r -f /data-temp 
