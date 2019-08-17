@@ -14,7 +14,7 @@ ENV MAX_MEM=4G
 #update all the things
 RUN apt-get update -y
 #install the things
-RUN apt-get install unzip megatools openjdk-8-jre -y
+RUN apt-get install unzip openjdk-8-jre wget -y
 #startup script
 COPY ./start.sh start.sh
 #make sure startup script can run
